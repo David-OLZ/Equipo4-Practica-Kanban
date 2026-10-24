@@ -35,10 +35,16 @@ header h1 {
  * - Eliminar el borde negro original.
  */
 .platillo {
-    border: 1px solid black; 
+    border: none;
     padding: 10px;
     margin: 5px;
-    /* Implementen sus reglas aquí */
+    
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.15s, box-shadow 0.15s;
 }
 
 #resumen-orden {
