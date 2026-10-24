@@ -53,7 +53,14 @@ document.getElementById('btn-ordenar').addEventListener('click', function() {
      * - Reinicia 'totalActual' a 0.
      * - Actualiza el texto del id 'total' en el HTML a "0.00".
      */
-    throw new Error("Equipo: implementen la lógica del botón enviar");
+    if (totalActual <= 0) {
+        alert("Selecciona al menos un platillo antes de ordenar");
+        return;
+    }
+    guardarComanda(totalActual);
+    alert("Orden enviada");
+    totalActual = 0;
+    document.getElementById('total').textContent = "0.00";
 });
 
 
